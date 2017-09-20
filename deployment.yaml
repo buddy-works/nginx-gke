@@ -1,0 +1,17 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: test-deploy
+  namespace: test-4
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: app
+    spec:
+      containers:
+      - name: nginx
+        image: eu.gcr.io/buddy-tests/nginx-page
+        ports:
+        - containerPort: 80
