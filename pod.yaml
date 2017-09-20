@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: migrate
+  namespace: default
+spec:
+  containers:
+  - name: migrate
+    image: 'ubuntu:latest'
+    command: ['ls', '-al']
+  restartPolicy: Never
